@@ -7,7 +7,7 @@
 require "twitter_search"
 
 class AppDelegate
-  attr_accessor :table
+  attr_accessor :table, :spinner
 
   def tweets
     @tweets ||= []
@@ -22,9 +22,11 @@ class AppDelegate
   # Grab new tweets and store in instance var
   # Pass it a block to run after tweets are collected
   def grab_tweets &block
+    self.spinner.startAnimation self
     TwitterSearch.new("macruby") do |tweets|
       @tweets = tweets
       block[]
+      self.spinner.stopAnimation self
     end
   end
 
