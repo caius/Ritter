@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="372"/>
+			<integer value="388"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -838,8 +838,8 @@
 														</object>
 													</object>
 													<object class="NSTextFieldCell" key="NSDataCell" id="972213629">
-														<int key="NSCellFlags">337772096</int>
-														<int key="NSCellFlags2">2048</int>
+														<int key="NSCellFlags">69336577</int>
+														<int key="NSCellFlags2">4096</int>
 														<string key="NSContents">Text Cell</string>
 														<object class="NSFont" key="NSSupport">
 															<string key="NSName">LucidaGrande</string>
@@ -847,6 +847,7 @@
 															<int key="NSfFlags">1044</int>
 														</object>
 														<reference key="NSControlView" ref="30972541"/>
+														<bool key="NSDrawsBackground">YES</bool>
 														<object class="NSColor" key="NSBackgroundColor" id="150891580">
 															<int key="NSColorSpace">6</int>
 															<string key="NSCatalogName">System</string>
@@ -881,7 +882,7 @@
 												</object>
 											</object>
 											<double key="NSRowHeight">17</double>
-											<int key="NSTvFlags">-700448768</int>
+											<int key="NSTvFlags">-692060160</int>
 											<reference key="NSDelegate"/>
 											<reference key="NSDataSource"/>
 											<int key="NSColumnAutoresizingStyle">4</int>
@@ -973,7 +974,7 @@
 								<int key="NSPeriodicInterval">75</int>
 							</object>
 						</object>
-						<object class="NSProgressIndicator" id="510966094">
+						<object class="NSProgressIndicator" id="484570086">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">1313</int>
 							<object class="NSPSMatrix" key="NSDrawMatrix"/>
@@ -1349,9 +1350,25 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">spinner</string>
 						<reference key="source" ref="85460297"/>
-						<reference key="destination" ref="510966094"/>
+						<reference key="destination" ref="484570086"/>
 					</object>
 					<int key="connectionID">405</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">tweet_column</string>
+						<reference key="source" ref="85460297"/>
+						<reference key="destination" ref="482286593"/>
+					</object>
+					<int key="connectionID">408</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="30972541"/>
+						<reference key="destination" ref="171875372"/>
+					</object>
+					<int key="connectionID">409</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1968,7 +1985,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="866883200"/>
 							<reference ref="815906218"/>
-							<reference ref="510966094"/>
+							<reference ref="484570086"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -2048,7 +2065,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">404</int>
-						<reference key="object" ref="510966094"/>
+						<reference key="object" ref="484570086"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 				</object>
@@ -2382,9 +2399,9 @@
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
-					<string>{{387, 541}, {375, 566}}</string>
+					<string>{{450, 538}, {375, 566}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{387, 541}, {375, 566}}</string>
+					<string>{{450, 538}, {375, 566}}</string>
 					<integer value="1"/>
 					<string>{{33, 99}, {480, 360}}</string>
 					<boolean value="NO"/>
@@ -2452,7 +2469,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">405</int>
+			<int key="maxID">409</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2470,9 +2487,11 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>spinner</string>
 							<string>table</string>
+							<string>tweet_column</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>

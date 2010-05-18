@@ -7,7 +7,7 @@
 require "twitter_search"
 
 class AppDelegate
-  attr_accessor :table, :spinner
+  attr_accessor :table, :spinner, :tweet_column
 
   def tweets
     @tweets ||= []
@@ -16,7 +16,11 @@ class AppDelegate
   def applicationDidFinishLaunching n
     NSLog "Started!"
 
+    NSLog "foo"
     self.refresh_tweets self
+    
+    cell = self.tweet_column.dataCell
+    cell.wraps = true
   end
 
   # Grab new tweets and store in instance var
