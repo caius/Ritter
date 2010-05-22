@@ -7,7 +7,6 @@
 //
 
 #import <MacRuby/MacRuby.h>
-#import "TweetColumnCell.h"
 
 int main(int argc, char *argv[])
 {
