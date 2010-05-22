@@ -48,6 +48,10 @@
 		0902479311A0D69100DE3F0A /* JSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0902479211A0D69100DE3F0A /* JSON.framework */; };
 		0902479711A0D6A100DE3F0A /* JSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0902479211A0D69100DE3F0A /* JSON.framework */; };
 		090247FD11A0D9EF00DE3F0A /* table_datasource.rb in Resources */ = {isa = PBXBuildFile; fileRef = 090247FC11A0D9EF00DE3F0A /* table_datasource.rb */; };
+		0914136B11A3483700765F17 /* preferences_controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0914136A11A3483700765F17 /* preferences_controller.rb */; };
+		0914141711A35BD800765F17 /* window_title_transformer.rb in Resources */ = {isa = PBXBuildFile; fileRef = 0914141611A35BD800765F17 /* window_title_transformer.rb */; };
+		09181D5011A7527A0036AC99 /* TweetColumnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09181D4F11A7527A0036AC99 /* TweetColumnCell.m */; };
+		09EF517F11A5CDE80032FFBB /* tweet_column_cell_ruby.rb in Resources */ = {isa = PBXBuildFile; fileRef = 09EF517E11A5CDE80032FFBB /* tweet_column_cell_ruby.rb */; };
 		2BFA9DA710CDF852007972A1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFA9DA510CDF852007972A1 /* MainMenu.xib */; };
 		4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = 4DE339F60D74FCDD00ADB6EE /* rb_main.rb */; };
 		4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE3BE130D8651D900ECA448 /* MacRuby.framework */; };
@@ -75,6 +79,11 @@
 		0902477411A0C7B700DE3F0A /* twitter_search.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = twitter_search.rb; sourceTree = "<group>"; };
 		0902479211A0D69100DE3F0A /* JSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSON.framework; path = /Volumes/Brutus/Users/caius/Library/Frameworks/JSON.framework; sourceTree = "<absolute>"; };
 		090247FC11A0D9EF00DE3F0A /* table_datasource.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = table_datasource.rb; sourceTree = "<group>"; };
+		0914136A11A3483700765F17 /* preferences_controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = preferences_controller.rb; sourceTree = "<group>"; };
+		0914141611A35BD800765F17 /* window_title_transformer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = window_title_transformer.rb; sourceTree = "<group>"; };
+		09181D4E11A7527A0036AC99 /* TweetColumnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetColumnCell.h; sourceTree = "<group>"; };
+		09181D4F11A7527A0036AC99 /* TweetColumnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetColumnCell.m; sourceTree = "<group>"; };
+		09EF517E11A5CDE80032FFBB /* tweet_column_cell_ruby.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = tweet_column_cell_ruby.rb; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		172754D5107598EA00D0347B /* stub_test.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = stub_test.rb; sourceTree = "<group>"; };
@@ -106,11 +115,24 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				09181D4C11A752640036AC99 /* ObjC */,
 				0902472111A0B3C900DE3F0A /* app_delegate.rb */,
 				0902477411A0C7B700DE3F0A /* twitter_search.rb */,
 				090247FC11A0D9EF00DE3F0A /* table_datasource.rb */,
+				0914136A11A3483700765F17 /* preferences_controller.rb */,
+				0914141611A35BD800765F17 /* window_title_transformer.rb */,
+				09EF517E11A5CDE80032FFBB /* tweet_column_cell_ruby.rb */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		09181D4C11A752640036AC99 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				09181D4E11A7527A0036AC99 /* TweetColumnCell.h */,
+				09181D4F11A7527A0036AC99 /* TweetColumnCell.m */,
+			);
+			name = ObjC;
 			sourceTree = "<group>";
 		};
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
@@ -244,6 +266,9 @@
 				0902472211A0B3C900DE3F0A /* app_delegate.rb in Resources */,
 				0902477511A0C7B700DE3F0A /* twitter_search.rb in Resources */,
 				090247FD11A0D9EF00DE3F0A /* table_datasource.rb in Resources */,
+				0914136B11A3483700765F17 /* preferences_controller.rb in Resources */,
+				0914141711A35BD800765F17 /* window_title_transformer.rb in Resources */,
+				09EF517F11A5CDE80032FFBB /* tweet_column_cell_ruby.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				09181D5011A7527A0036AC99 /* TweetColumnCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

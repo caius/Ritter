@@ -11,20 +11,28 @@ class TableDatasource
   end
 
   def tableView view, objectValueForTableColumn:column, row:index
-    get_tweet index, column.identifier
+    get_tweet index
   end
-  
+
   def tableView view, heightOfRow:index
+#    return 83;
+  
     tweet_column = view.tableColumnWithIdentifier("text")
-    string = get_tweet index, "text"
+    string = get_tweet(index)["text"]
 
     return view.rowHeight unless string
 
     cell = tweet_column.dataCell
     cell.stringValue = string
 
-    tallRect = NSRect.new([0, 0], [view.frame.size.width, 10000])
-    cell.cellSizeForBounds(tallRect).height
+    width = view.frame.size.width - TweetColumnCell.text_width_border
+
+    tallRect = NSRect.new([0, 0], [width, 10000])
+    height_border = TweetColumnCell.text_height_border
+    calculated_size = cell.cellSizeForBounds(tallRect).height + height_border
+    min_height = TweetColumnCell.min_height
+
+    calculated_size > min_height ? calculated_size : min_height
   end
 
 protected
@@ -34,8 +42,15 @@ protected
     NSApp.delegate.tweets
   end
 
-  def get_tweet index, field
-    tweets[index][field]
+  def get_tweet index
+    t = tweets[index]
+    {
+      "id"         => t["id"],
+      "created_at" => t["created_at"],
+      "text"       => t["text"],
+      "author"     => t["from_user"],
+      "avatar"     => t["profile_image_url"]
+    }
   end
 
 end
