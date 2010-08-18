@@ -76,7 +76,7 @@
   
   // Draw the avatar
   NSImage *image = [[NSImage alloc] initByReferencingURL:image_url];
-//  [image setFlipped:YES];
+  [image setFlipped:YES];
   [image setSize:NSMakeSize(55.0, 55.0)];
   [image drawInRect:[self iconFrameForCell:cellFrame]
            fromRect:NSZeroRect
