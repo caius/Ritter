@@ -15,8 +15,6 @@ class TableDatasource
   end
 
   def tableView view, heightOfRow:index
-#    return 83;
-  
     tweet_column = view.tableColumnWithIdentifier("text")
     string = get_tweet(index)["text"]
 
@@ -47,7 +45,7 @@ protected
     {
       "id"         => t["id"],
       "created_at" => t["created_at"],
-      "text"       => t["text"],
+      "text"       => t["text"].gsub("&lt;", "<").gsub("&gt;", ">"),
       "author"     => t["from_user"],
       "avatar"     => t["profile_image_url"]
     }
